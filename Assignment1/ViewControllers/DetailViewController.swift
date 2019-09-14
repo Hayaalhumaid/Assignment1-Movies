@@ -17,9 +17,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var movieOverview: UILabel!
     @IBOutlet weak var changeImageView: UIPickerView!
     @IBOutlet weak var likedButton: UIButton!
-    
+    @IBOutlet weak var unlikeButton: UIView!
+    @IBOutlet weak var likeLabel: UILabel!
     
     //MARK:- Properties
+    var likedMovie = ""
     var selectedMovie: Movie?
     private let dataSource = ["Poster Image", "Backdrop Image"]
 

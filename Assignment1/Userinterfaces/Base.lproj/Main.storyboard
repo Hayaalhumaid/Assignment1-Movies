@@ -107,11 +107,25 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-Vl-BA1">
                                 <rect key="frame" x="18" y="782" width="378" height="31"/>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpi-Ce-vX5">
-                                <rect key="frame" x="192" y="832" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpi-Ce-vX5">
+                                <rect key="frame" x="325" y="837" width="49" height="25"/>
                                 <state key="normal" title="Like"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlj-7D-vw4">
+                                <rect key="frame" x="40" y="837" width="43" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="nWN-MZ-wBf"/>
+                                </constraints>
+                                <state key="normal" title="Unlike">
+                                    <color key="titleColor" red="0.7546055317" green="0.0" blue="0.05991117285" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mip-eW-ySD">
+                                <rect key="frame" x="183" y="837" width="42" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -119,15 +133,26 @@
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="top" secondItem="vq8-8u-PN8" secondAttribute="bottom" constant="20" id="82l-aD-ABM"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="50" id="9ej-vR-PDm"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="centerX" secondItem="jls-w3-HPn" secondAttribute="centerX" id="BHM-Fd-cGW"/>
+                            <constraint firstItem="mlj-7D-vw4" firstAttribute="bottom" secondItem="29J-up-oil" secondAttribute="bottom" id="BTu-fF-DOM"/>
+                            <constraint firstItem="Mip-eW-ySD" firstAttribute="leading" secondItem="mlj-7D-vw4" secondAttribute="trailing" constant="100" id="Da4-bT-Vti"/>
                             <constraint firstItem="vq8-8u-PN8" firstAttribute="top" secondItem="r39-Xr-H0q" secondAttribute="bottom" constant="20" id="FXn-Fv-egm"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="vq8-8u-PN8" secondAttribute="trailing" id="GJ1-ZT-1iC"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Z4T-Vl-BA1" secondAttribute="trailing" constant="20" id="Gmn-ko-SeQ"/>
+                            <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="Mip-eW-ySD" secondAttribute="bottom" id="H6h-WR-feX"/>
+                            <constraint firstItem="Mip-eW-ySD" firstAttribute="leading" secondItem="mlj-7D-vw4" secondAttribute="trailing" constant="100" id="LAf-R6-siJ"/>
+                            <constraint firstItem="mlj-7D-vw4" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="25" id="PHA-sy-hj5"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="r39-Xr-H0q" secondAttribute="trailing" id="QFg-66-Yvq"/>
                             <constraint firstItem="r39-Xr-H0q" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="S1C-lY-1Fe"/>
+                            <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Vpi-Ce-vX5" secondAttribute="trailing" constant="40" id="Y2f-hB-sc4"/>
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="bsZ-dm-lgE"/>
+                            <constraint firstItem="Vpi-Ce-vX5" firstAttribute="leading" secondItem="Mip-eW-ySD" secondAttribute="trailing" constant="100" id="cFx-fe-g2i"/>
+                            <constraint firstItem="Vpi-Ce-vX5" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="25" id="caa-tz-phZ"/>
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="trailing" secondItem="29J-up-oil" secondAttribute="trailing" id="ddE-VQ-K7I"/>
+                            <constraint firstItem="Mip-eW-ySD" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="25" id="j15-O0-zod"/>
                             <constraint firstItem="Z4T-Vl-BA1" firstAttribute="top" secondItem="tHg-ga-oUm" secondAttribute="bottom" constant="45" id="l8O-sk-RdJ"/>
+                            <constraint firstItem="mlj-7D-vw4" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="40" id="mwD-wL-ojb"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="oj8-fm-cuG"/>
+                            <constraint firstItem="Vpi-Ce-vX5" firstAttribute="bottom" secondItem="29J-up-oil" secondAttribute="bottom" id="pmp-5T-pMc"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Lcr-KM-qh6" secondAttribute="trailing" id="pwO-hO-rGL"/>
                             <constraint firstItem="r39-Xr-H0q" firstAttribute="top" secondItem="29J-up-oil" secondAttribute="top" constant="20" id="w1m-Vo-pHc"/>
                             <constraint firstItem="vq8-8u-PN8" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="z4E-jb-AYG"/>
