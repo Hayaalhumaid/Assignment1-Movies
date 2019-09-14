@@ -104,24 +104,21 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHg-ga-oUm">
                                 <rect key="frame" x="0.0" y="521" width="414" height="216"/>
                             </pickerView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-Vl-BA1">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="20" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-Vl-BA1">
                                 <rect key="frame" x="18" y="782" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="Yl7-0C-BPJ" eventType="valueChanged" id="OC5-t3-BBN"/>
+                                </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpi-Ce-vX5">
-                                <rect key="frame" x="325" y="837" width="49" height="25"/>
-                                <state key="normal" title="Like"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cO9-w5-821">
+                                <rect key="frame" x="149" y="822" width="116" height="30"/>
+                                <state key="normal" title="Show Slider"/>
+                                <connections>
+                                    <action selector="showSlider:" destination="Yl7-0C-BPJ" eventType="touchUpInside" id="pFY-Wo-6Rk"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlj-7D-vw4">
-                                <rect key="frame" x="40" y="837" width="43" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="43" id="nWN-MZ-wBf"/>
-                                </constraints>
-                                <state key="normal" title="Unlike">
-                                    <color key="titleColor" red="0.7546055317" green="0.0" blue="0.05991117285" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mip-eW-ySD">
-                                <rect key="frame" x="183" y="837" width="42" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Movie Title Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-tt-Jb9">
+                                <rect key="frame" x="115" y="745" width="184" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,32 +126,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Z4T-Vl-BA1" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="20" id="467-7z-gqx"/>
+                            <constraint firstItem="cO9-w5-821" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="10" id="37X-bX-oc0"/>
+                            <constraint firstItem="Z4T-Vl-BA1" firstAttribute="top" secondItem="6Om-tt-Jb9" secondAttribute="bottom" constant="16" id="5SP-Xm-w5P"/>
+                            <constraint firstItem="cO9-w5-821" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="10" id="7kc-Av-fMd"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="top" secondItem="vq8-8u-PN8" secondAttribute="bottom" constant="20" id="82l-aD-ABM"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="50" id="9ej-vR-PDm"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="centerX" secondItem="jls-w3-HPn" secondAttribute="centerX" id="BHM-Fd-cGW"/>
-                            <constraint firstItem="mlj-7D-vw4" firstAttribute="bottom" secondItem="29J-up-oil" secondAttribute="bottom" id="BTu-fF-DOM"/>
-                            <constraint firstItem="Mip-eW-ySD" firstAttribute="leading" secondItem="mlj-7D-vw4" secondAttribute="trailing" constant="100" id="Da4-bT-Vti"/>
+                            <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="cO9-w5-821" secondAttribute="trailing" constant="149" id="Bx0-B6-nI8"/>
                             <constraint firstItem="vq8-8u-PN8" firstAttribute="top" secondItem="r39-Xr-H0q" secondAttribute="bottom" constant="20" id="FXn-Fv-egm"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="vq8-8u-PN8" secondAttribute="trailing" id="GJ1-ZT-1iC"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Z4T-Vl-BA1" secondAttribute="trailing" constant="20" id="Gmn-ko-SeQ"/>
-                            <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="Mip-eW-ySD" secondAttribute="bottom" id="H6h-WR-feX"/>
-                            <constraint firstItem="Mip-eW-ySD" firstAttribute="leading" secondItem="mlj-7D-vw4" secondAttribute="trailing" constant="100" id="LAf-R6-siJ"/>
-                            <constraint firstItem="mlj-7D-vw4" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="25" id="PHA-sy-hj5"/>
+                            <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="cO9-w5-821" secondAttribute="bottom" constant="10" id="HJI-9T-9Ws"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="r39-Xr-H0q" secondAttribute="trailing" id="QFg-66-Yvq"/>
                             <constraint firstItem="r39-Xr-H0q" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="S1C-lY-1Fe"/>
-                            <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Vpi-Ce-vX5" secondAttribute="trailing" constant="40" id="Y2f-hB-sc4"/>
+                            <constraint firstItem="cO9-w5-821" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="149" id="UMh-MA-Wko"/>
+                            <constraint firstItem="Z4T-Vl-BA1" firstAttribute="top" secondItem="6Om-tt-Jb9" secondAttribute="bottom" constant="16" id="WzA-vY-mei"/>
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="bsZ-dm-lgE"/>
-                            <constraint firstItem="Vpi-Ce-vX5" firstAttribute="leading" secondItem="Mip-eW-ySD" secondAttribute="trailing" constant="100" id="cFx-fe-g2i"/>
-                            <constraint firstItem="Vpi-Ce-vX5" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="25" id="caa-tz-phZ"/>
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="trailing" secondItem="29J-up-oil" secondAttribute="trailing" id="ddE-VQ-K7I"/>
-                            <constraint firstItem="Mip-eW-ySD" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="25" id="j15-O0-zod"/>
-                            <constraint firstItem="Z4T-Vl-BA1" firstAttribute="top" secondItem="tHg-ga-oUm" secondAttribute="bottom" constant="45" id="l8O-sk-RdJ"/>
-                            <constraint firstItem="mlj-7D-vw4" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="40" id="mwD-wL-ojb"/>
+                            <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="6Om-tt-Jb9" secondAttribute="trailing" constant="115" id="fG3-8F-d4r"/>
+                            <constraint firstItem="6Om-tt-Jb9" firstAttribute="top" secondItem="tHg-ga-oUm" secondAttribute="bottom" constant="8" id="nQ7-Ia-1lB"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="oj8-fm-cuG"/>
-                            <constraint firstItem="Vpi-Ce-vX5" firstAttribute="bottom" secondItem="29J-up-oil" secondAttribute="bottom" id="pmp-5T-pMc"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Lcr-KM-qh6" secondAttribute="trailing" id="pwO-hO-rGL"/>
                             <constraint firstItem="r39-Xr-H0q" firstAttribute="top" secondItem="29J-up-oil" secondAttribute="top" constant="20" id="w1m-Vo-pHc"/>
+                            <constraint firstItem="Z4T-Vl-BA1" firstAttribute="centerX" secondItem="6Om-tt-Jb9" secondAttribute="centerX" id="xek-rp-EHv"/>
+                            <constraint firstItem="6Om-tt-Jb9" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="115" id="yIR-hj-t0t"/>
                             <constraint firstItem="vq8-8u-PN8" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="z4E-jb-AYG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="29J-up-oil"/>
@@ -164,10 +159,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="changeImageView" destination="tHg-ga-oUm" id="SoQ-j8-iny"/>
-                        <outlet property="likedButton" destination="Vpi-Ce-vX5" id="XWu-Ri-kns"/>
                         <outlet property="movieImage" destination="vq8-8u-PN8" id="RVS-or-AwW"/>
                         <outlet property="movieOverview" destination="Lcr-KM-qh6" id="u8T-bt-H0m"/>
                         <outlet property="movieTitle" destination="r39-Xr-H0q" id="XCB-nX-9Td"/>
+                        <outlet property="slider" destination="Z4T-Vl-BA1" id="21e-LJ-ogx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaI-UJ-EF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
