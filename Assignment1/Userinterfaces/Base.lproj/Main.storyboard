@@ -101,15 +101,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHg-ga-oUm">
+                                <rect key="frame" x="0.0" y="521" width="414" height="216"/>
+                            </pickerView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-Vl-BA1">
+                                <rect key="frame" x="18" y="782" width="378" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpi-Ce-vX5">
+                                <rect key="frame" x="192" y="832" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Like"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Z4T-Vl-BA1" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="20" id="467-7z-gqx"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="top" secondItem="vq8-8u-PN8" secondAttribute="bottom" constant="20" id="82l-aD-ABM"/>
+                            <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="50" id="9ej-vR-PDm"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="centerX" secondItem="jls-w3-HPn" secondAttribute="centerX" id="BHM-Fd-cGW"/>
                             <constraint firstItem="vq8-8u-PN8" firstAttribute="top" secondItem="r39-Xr-H0q" secondAttribute="bottom" constant="20" id="FXn-Fv-egm"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="vq8-8u-PN8" secondAttribute="trailing" id="GJ1-ZT-1iC"/>
+                            <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Z4T-Vl-BA1" secondAttribute="trailing" constant="20" id="Gmn-ko-SeQ"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="r39-Xr-H0q" secondAttribute="trailing" id="QFg-66-Yvq"/>
                             <constraint firstItem="r39-Xr-H0q" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="S1C-lY-1Fe"/>
+                            <constraint firstItem="tHg-ga-oUm" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="bsZ-dm-lgE"/>
+                            <constraint firstItem="tHg-ga-oUm" firstAttribute="trailing" secondItem="29J-up-oil" secondAttribute="trailing" id="ddE-VQ-K7I"/>
+                            <constraint firstItem="Z4T-Vl-BA1" firstAttribute="top" secondItem="tHg-ga-oUm" secondAttribute="bottom" constant="45" id="l8O-sk-RdJ"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="oj8-fm-cuG"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Lcr-KM-qh6" secondAttribute="trailing" id="pwO-hO-rGL"/>
                             <constraint firstItem="r39-Xr-H0q" firstAttribute="top" secondItem="29J-up-oil" secondAttribute="top" constant="20" id="w1m-Vo-pHc"/>
@@ -121,6 +138,8 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="R5s-Vi-wTi"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="changeImageView" destination="tHg-ga-oUm" id="SoQ-j8-iny"/>
+                        <outlet property="likedButton" destination="Vpi-Ce-vX5" id="XWu-Ri-kns"/>
                         <outlet property="movieImage" destination="vq8-8u-PN8" id="RVS-or-AwW"/>
                         <outlet property="movieOverview" destination="Lcr-KM-qh6" id="u8T-bt-H0m"/>
                         <outlet property="movieTitle" destination="r39-Xr-H0q" id="XCB-nX-9Td"/>

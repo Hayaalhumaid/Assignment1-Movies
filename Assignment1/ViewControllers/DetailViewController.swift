@@ -10,32 +10,52 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var movieTitle: UILabel!
-
-    @IBOutlet weak var movieImage: UIImageView!
    
+//MARK:- Interface Builder
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieOverview: UILabel!
+    @IBOutlet weak var changeImageView: UIPickerView!
+    @IBOutlet weak var likedButton: UIButton!
     
+    
+    //MARK:- Properties
     var selectedMovie: Movie?
+    private let dataSource = ["Poster Image", "Backdrop Image"]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let link = "https://image.tmdb.org/t/p/w500" + self.selectedMovie!.poster_path
+        let link2 = "https://image.tmdb.org/t/p/w500" + self.selectedMovie!.backdrop_path
 
         self.movieTitle.text = self.selectedMovie!.title
         self.movieImage.downloadFrom(link: link)
-       self.movieOverview.text = self.selectedMovie!.overview
+        self.movieOverview.text = self.selectedMovie!.overview
+        
+        
+//        pickerView.dataSource = self
+//        pickerView.delegate = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+////MARK:- Picker Actions
+//extension DetailViewController : UIPickerViewDelegate , UIPickerViewDataSource{
+//    
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return dataSource.count
+//    }
+//    
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        detailLabel.text = dataSource[row]
+//    }
+//    
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return dataSource[row]
+//    }
+//    
+//}

@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     var pageNumber = 1
     var timer: Timer?
     
-    //MARK:- Viewcontroller's LifeCycle Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchMovieListFromServer(pageNumber: self.pageNumber)
