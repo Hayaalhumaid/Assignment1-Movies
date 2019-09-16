@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIScrollViewDelegate {
     
    
 //MARK:- Interface Builder
@@ -17,15 +17,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var movieOverview: UILabel!
     @IBOutlet weak var changeImageView: UIPickerView!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var scroll: UIScrollView!
     
     
     //MARK:- Properties
     var selectedMovie: Movie?
-    private let dataSource = ["Poster Image", "Backdrop Image"]
+    private let label = ["Poster Image", "Backdrop Image"]
     private var imageUrls: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scroll.minimumZoomScale = 1.0
+        self.scroll.maximumZoomScale = 6.0
+        
         let link = "https://image.tmdb.org/t/p/w500" + self.selectedMovie!.poster_path
         let link2 = "https://image.tmdb.org/t/p/w500" + self.selectedMovie!.backdrop_path
         imageUrls = [link,link2]
@@ -50,6 +54,18 @@ class DetailViewController: UIViewController {
     @IBAction func sliderAction(_ sender: UISlider) {
      movieTitle.font = movieTitle.font.withSize(CGFloat(Int(sender.value)))
     }
+
+//MARK:- Zooming Actions
+
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.movieImage
+
+    }
+
+//MARK:- Landscape Actions
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        print(newCollection.horizontalSizeClass == .compact ? "portrait" : "landscape")
+    }
     
 }
 
@@ -62,7 +78,7 @@ extension DetailViewController : UIPickerViewDelegate , UIPickerViewDataSource{
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataSource.count
+        return label.count
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -70,7 +86,7 @@ extension DetailViewController : UIPickerViewDelegate , UIPickerViewDataSource{
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dataSource[row]
+        return label[row]
     }
 
 }

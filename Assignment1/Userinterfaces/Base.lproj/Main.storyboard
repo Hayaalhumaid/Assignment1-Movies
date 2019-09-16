@@ -163,30 +163,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Change Movie Title Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-tt-Jb9">
-                                <rect key="frame" x="115" y="611" width="184" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vq8-8u-PN8">
-                                <rect key="frame" x="433" y="98" width="374" height="129"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vq8-8u-PN8" secondAttribute="height" multiplier="374:129" id="J0z-rY-Qfb"/>
-                                    <constraint firstAttribute="height" constant="250" id="y5F-Ug-csl"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="J0z-rY-Qfb"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="J0z-rY-Qfb"/>
-                                        <exclude reference="y5F-Ug-csl"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
+
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -208,8 +185,7 @@
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="vq8-8u-PN8" secondAttribute="trailing" id="GJ1-ZT-1iC"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Z4T-Vl-BA1" secondAttribute="trailing" constant="20" id="Gmn-ko-SeQ"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="cO9-w5-821" secondAttribute="bottom" constant="10" id="HJI-9T-9Ws"/>
-                            <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="tHg-ga-oUm" secondAttribute="trailing" constant="20" id="JOX-O6-7DC"/>
-                            <constraint firstItem="cO9-w5-821" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="71" id="Lw2-S0-F9s"/>
+=
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="r39-Xr-H0q" secondAttribute="trailing" id="QFg-66-Yvq"/>
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="leading" secondItem="cO9-w5-821" secondAttribute="trailing" constant="151" id="R2b-an-jEW"/>
                             <constraint firstItem="r39-Xr-H0q" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="S1C-lY-1Fe"/>
@@ -217,8 +193,7 @@
                             <constraint firstItem="cO9-w5-821" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="149" id="UMh-MA-Wko"/>
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="leading" secondItem="Lcr-KM-qh6" secondAttribute="trailing" constant="73" id="WT1-Zk-AXc"/>
                             <constraint firstItem="Z4T-Vl-BA1" firstAttribute="top" secondItem="6Om-tt-Jb9" secondAttribute="bottom" constant="16" id="WzA-vY-mei"/>
-                            <constraint firstItem="r39-Xr-H0q" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="X3h-F7-RjQ"/>
-                            <constraint firstItem="vq8-8u-PN8" firstAttribute="leading" secondItem="Lcr-KM-qh6" secondAttribute="trailing" constant="91" id="X5z-Ka-s5m"/>
+
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="bsZ-dm-lgE"/>
                             <constraint firstItem="tHg-ga-oUm" firstAttribute="trailing" secondItem="29J-up-oil" secondAttribute="trailing" id="ddE-VQ-K7I"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="6Om-tt-Jb9" secondAttribute="trailing" constant="115" id="fG3-8F-d4r"/>
@@ -227,7 +202,7 @@
                             <constraint firstItem="cO9-w5-821" firstAttribute="top" secondItem="Z4T-Vl-BA1" secondAttribute="bottom" constant="10" id="naU-R0-bZD"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="bottom" secondItem="cO9-w5-821" secondAttribute="bottom" constant="32" id="nmn-i0-Qjr"/>
                             <constraint firstItem="Lcr-KM-qh6" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" id="oj8-fm-cuG"/>
-                            <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Lcr-KM-qh6" secondAttribute="trailing" constant="510" id="okz-Zg-PbW"/>
+
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="Lcr-KM-qh6" secondAttribute="trailing" id="pwO-hO-rGL"/>
                             <constraint firstItem="29J-up-oil" firstAttribute="trailing" secondItem="cO9-w5-821" secondAttribute="trailing" constant="149" id="qpi-Lq-kdG"/>
                             <constraint firstItem="cO9-w5-821" firstAttribute="leading" secondItem="29J-up-oil" secondAttribute="leading" constant="149" id="r2X-18-B09"/>
@@ -328,6 +303,7 @@
                         <outlet property="movieImage" destination="vq8-8u-PN8" id="RVS-or-AwW"/>
                         <outlet property="movieOverview" destination="Lcr-KM-qh6" id="u8T-bt-H0m"/>
                         <outlet property="movieTitle" destination="r39-Xr-H0q" id="XCB-nX-9Td"/>
+                        <outlet property="scroll" destination="E8F-rm-0LM" id="0y7-Cc-XnZ"/>
                         <outlet property="slider" destination="Z4T-Vl-BA1" id="21e-LJ-ogx"/>
                     </connections>
                 </viewController>
